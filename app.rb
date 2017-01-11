@@ -1,7 +1,7 @@
 require "sinatra"
 
 get "/" do
-  "<h1>Welcome to the home page!</h1>"
+  erb :home
 end
 
 get "/roll" do
