@@ -1,11 +1,7 @@
 require "sinatra"
 
 get "/" do
-  "You requested the root path!"
-end
-
-get "/about" do
-  "This is the about path."
+  "<h1>Welcome to the home page!</h1>"
 end
 
 get "/roll" do
@@ -32,4 +28,10 @@ end
 # multiple path variables
 get "/greet/:first/:last" do
     "Hello there #{params[:first]} #{params[:last]}!"
+end
+
+# route definition
+
+get "/cat" do
+  send_file "cat.html"
 end
